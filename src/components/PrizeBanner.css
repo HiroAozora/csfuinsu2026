@@ -1,0 +1,32 @@
+/* src/components/PrizeBanner.css */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.prize-banner-container {
+  padding: 40px 0;
+  background-color: var(--accent-green);
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee-text {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 4px 4px 0px var(--border-color);
+  margin: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 0 2rem;
+}

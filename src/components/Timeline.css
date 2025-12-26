@@ -1,0 +1,60 @@
+/* src/components/Timeline.css */
+
+.timeline-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timeline-card {
+  background-color: var(--card-bg);
+  border: 4px solid var(--border-color);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 8px 8px 0px var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease-in-out;
+}
+
+.timeline-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 12px 12px 0px var(--accent-purple);
+}
+
+.timeline-date {
+  font-size: 1.1rem;
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-right: 20px;
+  background-color: var(--accent-green);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.timeline-activity {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: right;
+  color: var(--text-color);
+}
+
+/* --- Mobile View --- */
+@media (max-width: 768px) {
+  .timeline-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .timeline-date {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .timeline-activity {
+    text-align: left;
+  }
+}
