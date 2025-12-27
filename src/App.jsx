@@ -6,6 +6,7 @@ import CompetitionDetail from "./pages/CompetitionDetail";
 import "nes.css/css/nes.min.css";
 import "./components/Components.css";
 import "./components/Timeline.css";
+import "./App.css";
 
 function App() {
   const location = useLocation();

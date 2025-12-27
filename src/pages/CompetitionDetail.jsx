@@ -55,8 +55,27 @@ const CompetitionDetail = () => {
         <div className="sparkle-decor" style={{ bottom: "-15px", left: "-15px" }}></div>
         <div className="sparkle-decor" style={{ bottom: "-15px", right: "-15px" }}></div>
 
-        <h1 style={{ fontSize: '3.5rem', textAlign: 'center', marginBottom: '20px' }}>
-            {competition.icon} {competition.title}
+        <h1 style={{ fontSize: '3.5rem', textAlign: 'center', marginBottom: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <img
+            src={competition.icon}
+            alt={competition.title}
+            style={{
+              width:
+                competition.id === "mobile-legends"
+                  ? "8rem"
+                  : competition.id === "efootball"
+                  ? "12rem"
+                  : "4rem",
+              height:
+                competition.id === "mobile-legends"
+                  ? "8rem"
+                  : competition.id === "efootball"
+                  ? "12rem"
+                  : "4rem",
+              marginRight: '15px'
+            }}
+          />
+          {competition.title}
         </h1>
         
         <div style={{margin: '40px 0'}}>

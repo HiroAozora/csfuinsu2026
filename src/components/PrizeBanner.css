@@ -13,6 +13,12 @@
   padding: 40px 0;
   background-color: var(--accent-green);
   overflow: hidden;
+
+  /* --- Full width breakout --- */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
 }
 
 .marquee-content {

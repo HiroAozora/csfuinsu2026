@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Download, Instagram, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { competitionData, globalInfo } from "../data/competitionData";
+import { medparData } from "../data/medparData";
 import PrizeBanner from "../components/PrizeBanner";
 
 const Home = () => {
@@ -111,7 +112,24 @@ const Home = () => {
                     height: '100%'
                   }}
                 >
-                  <span style={{ fontSize: "60px" }}>{lomba.icon}</span>
+                  <img
+                    src={lomba.icon}
+                    alt={lomba.title}
+                    style={{
+                      width:
+                        lomba.id === "mobile-legends"
+                          ? "160px"
+                          : lomba.id === "efootball"
+                          ? "240px"
+                          : "80px",
+                      height:
+                        lomba.id === "mobile-legends"
+                          ? "160px"
+                          : lomba.id === "efootball"
+                          ? "240px"
+                          : "80px",
+                    }}
+                  />
                   <h3 style={{ fontSize: "1.8rem", margin: "15px 0" }}>
                     {lomba.title}
                   </h3>
@@ -161,11 +179,25 @@ const Home = () => {
         <h2 style={{ marginBottom: "30px", fontSize: '2.5rem' }}>MEDIA PARTNER</h2>
         <div
           className="csf-window"
-          style={{ maxWidth: "800px", margin: "0 auto", padding: "40px" }}
+          style={{ maxWidth: "1200px", margin: "0 auto", padding: "40px" }}
         >
-          <p style={{ color: "var(--text-color)", opacity: 0.6 }}>
-            Logo Media Partner Akan Muncul di Sini
-          </p>
+          {medparData.length > 0 ? (
+            <div className="medpar-grid">
+              {medparData.map((medpar) => (
+                <a key={medpar.id} href={medpar.url} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                  <img 
+                    src={medpar.logo} 
+                    alt={medpar.name} 
+                    style={{ height: '80px', width: 'auto', margin: '10px' }} 
+                  />
+                </a>
+              ))}
+            </div>
+          ) : (
+            <p style={{ color: "var(--text-color)", opacity: 0.6 }}>
+              Logo Media Partner Akan Muncul di Sini
+            </p>
+          )}
         </div>
 
         <div style={{ marginTop: "50px" }}>
@@ -173,6 +205,7 @@ const Home = () => {
           <p style={{fontSize: '1.2rem'}}>Hubungi Naina: <a href="https://wa.me/6281396679791" className="styled-link" target="_blank" rel="noopener noreferrer">0813-9667-9791</a></p>
         </div>
       </section>
+
 
       {/* --- FOOTER --- */}
       <footer className="footer">

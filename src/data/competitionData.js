@@ -1,3 +1,14 @@
+import tenisMejaIcon from '../assets/icons/tenismeja.svg';
+import badmintonIcon from '../assets/icons/badminton.svg';
+import fashionShowIcon from '../assets/icons/fashionshow.svg';
+import vocalSoloIcon from '../assets/icons/vocalsolo.svg';
+import caturIcon from '../assets/icons/catur.svg';
+import mobileLegendsIcon from '../assets/icons/mobile-legends-logo.svg';
+import futsalIcon from '../assets/icons/futsal.svg';
+import designPosterIcon from '../assets/icons/designposter.svg';
+import cerdasCermatIcon from '../assets/icons/cerdascermat.svg';
+import efootballIcon from '../assets/icons/e-football-logo.svg';
+
 const palette = [
   '#8e44ad', '#27ae60', '#9b59b6', '#2ecc71', '#f39c12',
   '#c0392b', '#16a085', '#d35400', '#2980b9', '#e74c3c'
@@ -8,7 +19,7 @@ export const competitionData = [
     id: "tenis-meja",
     title: "Tenis Meja",
     htm: "Rp 25.000",
-    icon: "🏓",
+    icon: tenisMejaIcon,
     color: palette[0],
     cp: "Nofal (087816519159), Najwa (083111303529)",
     linkGForm: "https://forms.gle/uNJLMSjVsWZfTae86",
@@ -21,7 +32,7 @@ export const competitionData = [
     id: "badminton",
     title: "Badminton",
     htm: "Rp 50.000",
-    icon: "🏸",
+    icon: badmintonIcon,
     color: palette[1],
     cp: "Surizky (085765244197), Aulia (083190403619)",
     linkGForm:
@@ -35,7 +46,7 @@ export const competitionData = [
     id: "fashion-show",
     title: "Fashion Show",
     htm: "Rp 70.000", // Sesuai Guidebook hal. 13
-    icon: "🎭",
+    icon: fashionShowIcon,
     color: palette[2],
     cp: "Sarah (082294086808), Nazwa (082272658094)",
     linkGForm: "https://forms.gle/U6Xn3Z7Bb89s27mP8",
@@ -48,7 +59,7 @@ export const competitionData = [
     id: "vocal-solo",
     title: "Vocal Solo",
     htm: "Rp 50.000", // Sesuai Guidebook hal. 17
-    icon: "🎤",
+    icon: vocalSoloIcon,
     color: palette[3],
     cp: "Vima (082238070682)",
     linkGForm: "https://forms.gle/G4ReKRbrLq5QSDfT8",
@@ -61,7 +72,7 @@ export const competitionData = [
     id: "catur",
     title: "Catur",
     htm: "Rp 25.000",
-    icon: "♟️",
+    icon: caturIcon,
     color: palette[4],
     cp: "Luthfi (082362305382)",
     linkGForm: "https://forms.gle/fkeArfw5nvwz6brF9",
@@ -74,7 +85,7 @@ export const competitionData = [
     id: "mobile-legends",
     title: "Mobile Legends",
     htm: "Rp 75.000",
-    icon: "⚔️",
+    icon: mobileLegendsIcon,
     color: palette[5],
     cp: "Dimas (082267202733)",
     linkGForm: "https://forms.gle/34yhDfcxhPFjxXPo6",
@@ -87,7 +98,7 @@ export const competitionData = [
     id: "futsal",
     title: "Futsal",
     htm: "Rp 175.000",
-    icon: "⚽",
+    icon: futsalIcon,
     color: palette[6],
     cp: "Arman (082267335915), Ihsan (081396399708)",
     linkGForm:
@@ -101,7 +112,7 @@ export const competitionData = [
     id: "design-poster",
     title: "Design Poster",
     htm: "Rp 20.000",
-    icon: "🎨",
+    icon: designPosterIcon,
     color: palette[7],
     cp: "Rasyid (082163564827), Haidar (089521507646)",
     linkGForm: "https://forms.gle/wQKnPaF242e7v37Y9",
@@ -114,7 +125,7 @@ export const competitionData = [
     id: "cerdas-cermat",
     title: "Cerdas Cermat",
     htm: "Rp 50.000",
-    icon: "🧠",
+    icon: cerdasCermatIcon,
     color: palette[8],
     cp: "Alief (081388451299)",
     linkGForm:
@@ -128,7 +139,7 @@ export const competitionData = [
     id: "efootball",
     title: "E-Football Console",
     htm: "Rp 25.000",
-    icon: "🎮",
+    icon: efootballIcon,
     color: palette[9],
     cp: "Dian (081360389967)",
     linkGForm: "https://forms.gle/WrgRDYm7iErjUFrs9",

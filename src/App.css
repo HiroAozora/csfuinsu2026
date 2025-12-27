@@ -1,8 +1,6 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
 .logo {
@@ -39,4 +37,13 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Media Partner Grid */
+.medpar-grid {
+  display: grid;
+  gap: 20px; /* Jarak antar logo */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  align-items: center;
+  justify-content: center;
 }

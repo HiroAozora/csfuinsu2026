@@ -44,9 +44,15 @@ a.styled-link:hover {
 /* --- Footer --- */
 .footer {
   padding: 60px 20px;
-  background-color: var(--text-color);
+  background-color: var(--accent-purple);
   color: var(--primary-bg);
   text-align: center;
+
+  /* --- Full width breakout --- */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
 }
 
 .footer-links a {

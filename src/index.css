@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --primary-bg: #fdf5e6; /* A light, creamy background */
   --text-color: #1a237e;  /* A dark navy, almost black */
