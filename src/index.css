@@ -21,6 +21,12 @@ body {
   font-family: 'VT323', monospace;
 }
 
+/* Force disable underline on all links and their hover states */
+a, a[href]:hover {
+  text-decoration: none !important;
+}
+
+
 h1, h2, h3, h4, h5, h6, p, a, button, span, div {
   font-family: 'VT323', monospace;
 }

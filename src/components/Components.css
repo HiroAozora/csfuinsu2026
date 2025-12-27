@@ -33,12 +33,13 @@
 /* --- Styled Links --- */
 a.styled-link {
   color: var(--accent-purple);
-  text-decoration: underline;
+  text-decoration: underline !important;
   font-weight: bold;
 }
 
 a.styled-link:hover {
   color: var(--accent-green);
+  text-decoration: none;
 }
 
 /* --- Footer --- */

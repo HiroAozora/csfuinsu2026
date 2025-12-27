@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { competitionData, globalInfo } from "../data/competitionData";
 import { medparData } from "../data/medparData";
 import PrizeBanner from "../components/PrizeBanner";
+import ContactCard from "../components/ContactCard";
 
 const Home = () => {
   const containerVariants = {
@@ -202,7 +203,7 @@ const Home = () => {
 
         <div style={{ marginTop: "50px" }}>
           <h3 style={{fontSize: '2rem'}}>CALLING FOR SPONSOR</h3>
-          <p style={{fontSize: '1.2rem'}}>Hubungi Naina: <a href="https://wa.me/6281396679791" className="styled-link" target="_blank" rel="noopener noreferrer">0813-9667-9791</a></p>
+          <ContactCard name="Naina" phone="0813-9667-9791" />
         </div>
       </section>
 
@@ -223,7 +224,7 @@ const Home = () => {
           }}
         >
           <a href={globalInfo.links.instagram} target="_blank" rel="noopener noreferrer"><Instagram /></a>
-          <a href="mailto:hmjilkom.uinsu@gmail.com"><Mail /></a>
+          <a href="mailto:hmjilkomp@uinsu.ac.id"><Mail /></a>
         </div>
       </footer>
     </div>

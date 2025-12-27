@@ -3,6 +3,8 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { competitionData, globalInfo } from '../data/competitionData';
 import { Download, ArrowLeft } from 'lucide-react';
+import ContactCard from '../components/ContactCard';
+import './CompetitionDetail.css';
 
 const CompetitionDetail = () => {
   const { id } = useParams();
@@ -23,16 +25,6 @@ const CompetitionDetail = () => {
       </div>
     );
   }
-
-  const formatWhatsappLink = (cp) => {
-    const phone = cp.match(/(\d{10,})/);
-    if (phone) {
-      const internationalNumber = '62' + phone[0].substring(1);
-      const name = cp.split('(')[0].trim();
-      return `https://wa.me/${internationalNumber}?text=Halo%20kak%20${name},%20saya%20tertarik%20dengan%20lomba%20${competition.title}.`;
-    }
-    return '#';
-  };
 
   return (
     <div style={{ padding: '120px 20px 80px', maxWidth: '900px', margin: '0 auto' }}>
@@ -117,11 +109,21 @@ const CompetitionDetail = () => {
         </div>
         
         <div style={{margin: '40px 0'}}>
-            <h3 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>Contact Person</h3>
-            <div>
-              <p style={{fontSize: '1.2rem'}}>
-                Narahubung: <a href={formatWhatsappLink(competition.cp)} className="styled-link" target="_blank" rel="noopener noreferrer">{competition.cp}</a>
-              </p>
+            <h3 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Contact Person</h3>
+            <div className="contact-person-wrapper">
+              {competition.cp.split(',').map(person => {
+                const name = person.split('(')[0].trim();
+                const phone = person.substring(person.indexOf('(') + 1, person.indexOf(')'));
+                
+                return (
+                  <ContactCard 
+                    key={name}
+                    name={name}
+                    phone={phone}
+                    competitionTitle={competition.title} 
+                  />
+                )
+              })}
             </div>
         </div>
 

@@ -1,0 +1,45 @@
+/* src/components/ContactCard.css */
+
+.contact-card-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--accent-green);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 3px solid var(--border-color);
+  box-shadow: 6px 6px 0px var(--border-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 10px 10px 0px var(--border-color);
+}
+
+.contact-card-logo {
+  width: 32px;
+  height: 32px;
+}
+
+.contact-card-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.contact-card-text {
+  font-size: 1.4rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.contact-card-phone {
+  font-size: 1.3rem;
+}
