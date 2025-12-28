@@ -6,6 +6,7 @@ import { competitionData, globalInfo } from "../data/competitionData";
 import { medparData } from "../data/medparData";
 import PrizeBanner from "../components/PrizeBanner";
 import ContactCard from "../components/ContactCard";
+import TenantCTA from "../components/TenantCTA";
 
 const Home = () => {
   const containerVariants = {
@@ -61,11 +62,17 @@ const Home = () => {
           >
             "Beyond the Code: Where Technology, Talent, and Sport Unite"
           </p>
-          <div style={{ marginTop: "30px" }}>
+          {/* <div
+            style={{
+              marginTop: "30px",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
             <p className="nes-badge">
               <span className="is-dark">JANUARI 2026</span>
             </p>
-          </div>
+          </div> */}
         </motion.div>
       </section>
 
@@ -74,6 +81,7 @@ const Home = () => {
 
       {/* --- TIMELINE SECTION --- */}
       <section
+        id="timeline"
         style={{ padding: "40px 20px", maxWidth: "900px", margin: "0 auto" }}
       >
         <h2
@@ -186,37 +194,22 @@ const Home = () => {
         </motion.div>
       </section>
 
-      {/* --- GUIDEBOOK & TENANT SECTION --- */}
-      <section style={{ padding: "40px 20px", textAlign: "center" }}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "20px",
-            flexWrap: "wrap",
-          }}
+      {/* --- GUIDEBOOK SECTION --- */}
+      <section style={{ padding: "0 20px 40px", textAlign: "center" }}>
+        <motion.a
+          href={globalInfo.links.guidebook}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="custom-btn btn-purple"
+          whileHover={{ scale: 1.05 }}
         >
-          <motion.a
-            href={globalInfo.links.guidebook}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="custom-btn btn-purple"
-            whileHover={{ scale: 1.05 }}
-          >
-            <Download size={20} style={{ marginRight: "10px" }} /> DOWNLOAD
-            GUIDEBOOK
-          </motion.a>
-          <motion.a
-            href={globalInfo.links.tenant}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="custom-btn btn-green"
-            whileHover={{ scale: 1.05 }}
-          >
-            DAFTAR TENANT
-          </motion.a>
-        </div>
+          <Download size={20} style={{ marginRight: "10px" }} /> DOWNLOAD
+          GUIDEBOOK
+        </motion.a>
       </section>
+
+      {/* --- TENANT CTA SECTION --- */}
+      <TenantCTA />
 
       {/* --- SPONSOR & MEDIA PARTNER --- */}
       <section
@@ -261,7 +254,15 @@ const Home = () => {
 
         <div style={{ marginTop: "50px" }}>
           <h3 style={{ fontSize: "2rem" }}>CALLING FOR SPONSOR</h3>
-          <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', justifyContent: 'center', marginTop: '20px' }}>
+          <div
+            style={{
+              display: "flex",
+              gap: "15px",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              marginTop: "20px",
+            }}
+          >
             <ContactCard name="Rifdah" phone="0882-6037-8865" />
             <ContactCard name="Faqih" phone="0858-1490-0172" />
           </div>

@@ -81,6 +81,7 @@ const Navbar = () => {
         {/* Desktop Links */}
         <div className="nav-links">
           <NavLink to="/">HOME</NavLink>
+          <NavLink to="/#timeline">TIMELINE</NavLink>
           <NavLink to="/#lomba">LOMBA</NavLink>
           <NavLink to="/#sponsor">SPONSOR</NavLink>
         </div>
@@ -89,6 +90,7 @@ const Navbar = () => {
       {/* Mobile Menu - now outside the window */}
       <div className={`mobile-nav-links ${isMenuOpen ? "open" : ""}`}>
         <NavLink to="/">HOME</NavLink>
+        <NavLink to="/#timeline">TIMELINE</NavLink>
         <NavLink to="/#lomba">LOMBA</NavLink>
         <NavLink to="/#sponsor">SPONSOR</NavLink>
       </div>

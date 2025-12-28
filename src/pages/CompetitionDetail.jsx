@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { competitionData, globalInfo } from '../data/competitionData';
-import { Download, ArrowLeft } from 'lucide-react';
+import { Download, ArrowLeft, ClipboardPen } from 'lucide-react';
 import ContactCard from '../components/ContactCard';
 import './CompetitionDetail.css';
 
@@ -129,6 +129,7 @@ const CompetitionDetail = () => {
 
         <div style={{textAlign: 'center', marginTop: '50px', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px'}}>
             <motion.a href={competition.linkGForm} target="_blank" rel="noopener noreferrer" className="custom-btn btn-green" style={{fontSize: '1.2rem'}} whileHover={{ scale: 1.05 }}>
+                <ClipboardPen size={20} style={{ marginRight: '10px' }}/>
                 Daftar Sekarang
             </motion.a>
             <motion.a href={globalInfo.links.guidebook} target="_blank" rel="noopener noreferrer" className="custom-btn btn-purple" style={{fontSize: '1.2rem'}} whileHover={{ scale: 1.05 }}>

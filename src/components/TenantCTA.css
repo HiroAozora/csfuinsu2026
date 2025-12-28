@@ -1,0 +1,65 @@
+.tenant-cta-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.tenant-cta-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fffaf0; /* Pale yellow/cream background */
+}
+
+.tenant-cta-icon-area {
+  color: var(--accent-purple);
+}
+
+.tenant-cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.tenant-cta-title {
+  font-size: 2.8rem;
+  margin: 0;
+  color: var(--accent-purple);
+}
+
+.tenant-cta-description {
+  font-size: 1.4rem;
+  margin: 0;
+  max-width: 500px;
+}
+
+.tenant-cta-button {
+  font-size: 1.5rem !important;
+  padding: 15px 30px !important;
+  margin-top: 10px;
+}
+
+.tenant-cta-scarcity {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .tenant-cta-card {
+    flex-direction: row;
+    text-align: left;
+    gap: 40px;
+  }
+  .tenant-cta-content {
+    align-items: flex-start;
+  }
+  .tenant-cta-icon-area {
+    flex-shrink: 0;
+  }
+}
