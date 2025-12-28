@@ -213,7 +213,7 @@ const Home = () => {
 
       {/* --- SPONSOR & MEDIA PARTNER --- */}
       <section
-        id="sponsor"
+        // id="sponsor"
         style={{ padding: "80px 20px", textAlign: "center" }}
       >
         <h2 style={{ marginBottom: "30px", fontSize: "2.5rem" }}>
@@ -252,7 +252,7 @@ const Home = () => {
           )}
         </div>
 
-        <div style={{ marginTop: "50px" }}>
+        <div style={{ marginTop: "50px" }} id="sponsor">
           <h3 style={{ fontSize: "2rem" }}>CALLING FOR SPONSOR</h3>
           <div
             style={{
