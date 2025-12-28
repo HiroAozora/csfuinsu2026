@@ -24,10 +24,10 @@ const Home = () => {
   };
 
   const globalTimeline = [
-      { date: "24 Des 2025 - 07 Jan 2026", activity: "Pendaftaran Perlombaan" },
-      { date: "08 Januari 2026", activity: "Technical Meeting" },
-      { date: "12 - 13 Januari 2026", activity: "Pelaksanaan Perlombaan" },
-      { date: "14 Januari 2026", activity: "Pengumuman Juara" },
+    { date: "24 Des 2025 - 07 Jan 2026", activity: "Pendaftaran Perlombaan" },
+    { date: "08 Januari 2026", activity: "Technical Meeting" },
+    { date: "12 - 13 Januari 2026", activity: "Pelaksanaan Perlombaan" },
+    { date: "14 Januari 2026", activity: "Pengumuman Juara" },
   ];
 
   return (
@@ -41,12 +41,24 @@ const Home = () => {
           className="csf-window"
           style={{ maxWidth: "800px", margin: "0 auto", padding: "60px 20px" }}
         >
-          <div className="sparkle-decor" style={{ top: "-15px", left: "-15px" }}></div>
-          <div className="sparkle-decor" style={{ bottom: "-15px", right: "-15px" }}></div>
+          <div
+            className="sparkle-decor"
+            style={{ top: "-15px", left: "-15px" }}
+          ></div>
+          <div
+            className="sparkle-decor"
+            style={{ bottom: "-15px", right: "-15px" }}
+          ></div>
           <h1 style={{ fontSize: "3.5rem", marginBottom: "10px" }}>
             COMPUTER SCIENCE FESTIVAL 2026
           </h1>
-          <p style={{ fontSize: "1.5rem", letterSpacing: "2px", color: "var(--text-color)" }}>
+          <p
+            style={{
+              fontSize: "1.5rem",
+              letterSpacing: "2px",
+              color: "var(--text-color)",
+            }}
+          >
             "Beyond the Code: Where Technology, Talent, and Sport Unite"
           </p>
           <div style={{ marginTop: "30px" }}>
@@ -61,29 +73,50 @@ const Home = () => {
       <PrizeBanner />
 
       {/* --- TIMELINE SECTION --- */}
-      <section style={{ padding: "40px 20px", maxWidth: "900px", margin: "0 auto" }}>
-        <h2 style={{ textAlign: "center", marginBottom: "30px", fontSize: "2.5rem" }}>
+      <section
+        style={{ padding: "40px 20px", maxWidth: "900px", margin: "0 auto" }}
+      >
+        <h2
+          style={{
+            textAlign: "center",
+            marginBottom: "30px",
+            fontSize: "2.5rem",
+          }}
+        >
           GLOBAL EVENT TIMELINE
         </h2>
-        <motion.div 
-            className="timeline-wrapper"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+        <motion.div
+          className="timeline-wrapper"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
         >
           {globalTimeline.map((item, index) => (
-            <motion.div key={index} className="timeline-card" variants={itemVariants}>
-                <div className="timeline-date">{item.date}</div>
-                <div className="timeline-activity">{item.activity}</div>
+            <motion.div
+              key={index}
+              className="timeline-card"
+              variants={itemVariants}
+            >
+              <div className="timeline-date">{item.date}</div>
+              <div className="timeline-activity">{item.activity}</div>
             </motion.div>
           ))}
         </motion.div>
       </section>
 
       {/* --- COMPETITION GRID --- */}
-      <section id="lomba" style={{ padding: "80px 20px", maxWidth: "1200px", margin: "0 auto" }}>
-        <h2 style={{ textAlign: "center", marginBottom: "50px", fontSize: "2.5rem" }}>
+      <section
+        id="lomba"
+        style={{ padding: "80px 20px", maxWidth: "1200px", margin: "0 auto" }}
+      >
+        <h2
+          style={{
+            textAlign: "center",
+            marginBottom: "50px",
+            fontSize: "2.5rem",
+          }}
+        >
           SELECT YOUR COMPETITION
         </h2>
         <motion.div
@@ -103,14 +136,17 @@ const Home = () => {
               variants={itemVariants}
               whileHover={{ y: -10, transition: { duration: 0.2 } }}
             >
-              <Link to={`/lomba/${lomba.id}`} style={{ textDecoration: "none", color: "inherit" }}>
+              <Link
+                to={`/lomba/${lomba.id}`}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
                 <div
                   className="csf-window"
                   style={{
                     padding: "30px",
                     textAlign: "center",
                     borderTop: `15px solid ${lomba.color}`,
-                    height: '100%'
+                    height: "100%",
                   }}
                 >
                   <img
@@ -134,7 +170,13 @@ const Home = () => {
                   <h3 style={{ fontSize: "1.8rem", margin: "15px 0" }}>
                     {lomba.title}
                   </h3>
-                  <p style={{ fontWeight: "bold", fontSize: '1.2rem', color: 'var(--accent-green)' }}>
+                  <p
+                    style={{
+                      fontWeight: "bold",
+                      fontSize: "1.2rem",
+                      color: "var(--accent-green)",
+                    }}
+                  >
                     HTM: {lomba.htm}
                   </p>
                 </div>
@@ -161,7 +203,8 @@ const Home = () => {
             className="custom-btn btn-purple"
             whileHover={{ scale: 1.05 }}
           >
-            <Download size={20} style={{ marginRight: '10px' }} /> DOWNLOAD GUIDEBOOK
+            <Download size={20} style={{ marginRight: "10px" }} /> DOWNLOAD
+            GUIDEBOOK
           </motion.a>
           <motion.a
             href={globalInfo.links.tenant}
@@ -176,8 +219,13 @@ const Home = () => {
       </section>
 
       {/* --- SPONSOR & MEDIA PARTNER --- */}
-      <section id="sponsor" style={{ padding: "80px 20px", textAlign: "center" }}>
-        <h2 style={{ marginBottom: "30px", fontSize: '2.5rem' }}>MEDIA PARTNER</h2>
+      <section
+        id="sponsor"
+        style={{ padding: "80px 20px", textAlign: "center" }}
+      >
+        <h2 style={{ marginBottom: "30px", fontSize: "2.5rem" }}>
+          MEDIA PARTNER
+        </h2>
         <div
           className="csf-window"
           style={{ maxWidth: "1200px", margin: "0 auto", padding: "40px" }}
@@ -185,11 +233,21 @@ const Home = () => {
           {medparData.length > 0 ? (
             <div className="medpar-grid">
               {medparData.map((medpar) => (
-                <a key={medpar.id} href={medpar.url} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                  <img 
-                    src={medpar.logo} 
-                    alt={medpar.name} 
-                    style={{ height: '80px', width: 'auto', margin: '10px' }} 
+                <a
+                  key={medpar.id}
+                  href={medpar.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <img
+                    src={medpar.logo}
+                    alt={medpar.name}
+                    style={{ height: "80px", width: "auto", margin: "10px" }}
                   />
                 </a>
               ))}
@@ -202,18 +260,20 @@ const Home = () => {
         </div>
 
         <div style={{ marginTop: "50px" }}>
-          <h3 style={{fontSize: '2rem'}}>CALLING FOR SPONSOR</h3>
-          <ContactCard name="Naina" phone="0813-9667-9791" />
+          <h3 style={{ fontSize: "2rem" }}>CALLING FOR SPONSOR</h3>
+          <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', justifyContent: 'center', marginTop: '20px' }}>
+            <ContactCard name="Rifdah" phone="0882-6037-8865" />
+            <ContactCard name="Faqih" phone="0858-1490-0172" />
+          </div>
         </div>
       </section>
 
-
       {/* --- FOOTER --- */}
       <footer className="footer">
-        <p style={{ fontSize: "1.5rem", marginBottom: '10px' }}>
+        <p style={{ fontSize: "1.5rem", marginBottom: "10px" }}>
           {globalInfo.organizedBy}
         </p>
-        <p style={{fontSize: '1.2rem'}}>Fakultas Sains dan Teknologi UINSU</p>
+        <p style={{ fontSize: "1.2rem" }}>Fakultas Sains dan Teknologi UINSU</p>
         <div
           className="footer-links"
           style={{
@@ -223,8 +283,16 @@ const Home = () => {
             gap: "30px",
           }}
         >
-          <a href={globalInfo.links.instagram} target="_blank" rel="noopener noreferrer"><Instagram /></a>
-          <a href="mailto:hmjilkomp@uinsu.ac.id"><Mail /></a>
+          <a
+            href={globalInfo.links.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Instagram />
+          </a>
+          <a href="mailto:hmjilkomp@uinsu.ac.id">
+            <Mail />
+          </a>
         </div>
       </footer>
     </div>
