@@ -53,7 +53,8 @@
   transition: all 0.3s ease;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
   background-color: var(--accent-purple);
   color: #fff;
 }
@@ -96,7 +97,7 @@
     gap: 10px; /* Reduced gap for a tighter look */
     background-color: var(--card-bg);
     border-radius: 25px;
-    
+
     /* Animation */
     max-height: 0;
     overflow: hidden;
@@ -106,7 +107,7 @@
     border: none; /* No border when closed */
     box-shadow: none; /* No shadow when closed */
   }
-  
+
   .mobile-nav-links.open {
     max-height: 300px; /* Adjust as needed */
     padding: 30px 20px;

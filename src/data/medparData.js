@@ -1,5 +1,3 @@
-// src/data/medparData.js
-
 import semafebiLogo from "../assets/logo-medpar/semafebi.png";
 import semafkmLogo from "../assets/logo-medpar/semafkm.png";
 import semafstLogo from "../assets/logo-medpar/semafst.png";
