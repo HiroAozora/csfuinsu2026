@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 import { competitionData, globalInfo } from "../data/competitionData";
 import { medparData } from "../data/medparData";
 import PrizeBanner from "../components/PrizeBanner";
-import ContactCard from "../components/ContactCard";
+// import ContactCard from "../components/ContactCard";
 import TenantCTA from "../components/TenantCTA";
+import Sponsor from "../components/Sponsor";
 
 const Home = () => {
   const containerVariants = {
@@ -252,7 +253,11 @@ const Home = () => {
           )}
         </div>
 
-        <div style={{ marginTop: "50px" }} id="sponsor">
+        {/* SPONSOR SECTION */}
+        <Sponsor />
+        <div id="sponsor"></div>
+
+        {/* <div style={{ marginTop: "50px" }} id="sponsor">
           <h3 style={{ fontSize: "2rem" }}>CALLING FOR SPONSOR</h3>
           <div
             style={{
@@ -266,7 +271,7 @@ const Home = () => {
             <ContactCard name="Rifdah" phone="0882-6037-8865" />
             <ContactCard name="Faqih" phone="0858-1490-0172" />
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* --- FOOTER --- */}
